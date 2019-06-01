@@ -16,7 +16,7 @@ def count_time(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
         sort_array = func(*args, **kwargs)
-        print("--- {} элементов: {:.2f} seconds ---".format(len(sort_array), time.time() - start_time))
+        print("\n--- {} элементов: {:.2f} seconds ---\n".format(len(sort_array), time.time() - start_time))
 
         return sort_array
 
@@ -53,7 +53,7 @@ class SortBubble:
 
 if __name__ == "__main__":
     # generate some integers
-    A = [randint(0, 100) for _ in range(25_000)]
+    A = [randint(0, 25_000) for _ in range(25_000)]
 
     print(A)
     bubble = SortBubble(A)
